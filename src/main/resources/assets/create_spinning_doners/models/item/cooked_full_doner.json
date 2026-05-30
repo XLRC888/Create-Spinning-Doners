@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create_spinning_doners:item/cooked_full_doner"
+  }
+}

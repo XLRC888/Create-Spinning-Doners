@@ -1,0 +1,49 @@
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+
+# Minecraft run directories
+run/
+/run/
+/run-data/
+
+# IntelliJ IDEA
+.idea/
+out/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+eclipse/
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.factorypath
+.externalToolBuilders/
+*.launch
+.cproject
+.buildpath
+
+# VS Code & Agent Tools
+.vscode/
+.antigravitycli/
+
+# Log files
+*.log
+
+# OS-specific and extra files
+.DS_Store
+Thumbs.db
+/libs/

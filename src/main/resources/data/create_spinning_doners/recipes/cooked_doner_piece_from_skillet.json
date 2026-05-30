@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "create_spinning_doners:raw_doner_piece"
+  },
+  "result": "create_spinning_doners:cooked_doner_piece"
+}

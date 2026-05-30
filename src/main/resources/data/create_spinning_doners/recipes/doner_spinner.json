@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" K ", "BSB", " B "],
+  "key": {
+    "B": {
+      "tag": "forge:ingots/brass"
+    },
+    "S": {
+      "item": "create:shaft"
+    },
+    "K": {
+      "tag": "farmersdelight:tools/knives"
+    }
+  },
+  "result": {
+    "item": "create_spinning_doners:doner_spinner"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "create_spinning_doners:item/doner_knife"
+  }
+}

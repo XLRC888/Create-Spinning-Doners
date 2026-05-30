@@ -1,0 +1,8 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "create_spinning_doners:block/doner_cooked",
+    "casing": "create:block/brass_casing"
+  },
+  "elements": []
+}

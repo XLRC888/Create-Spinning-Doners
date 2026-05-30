@@ -1,0 +1,452 @@
+{
+  "variants": {
+    "half=upper,facing=north,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=north,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=north,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=north,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=north,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=north,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=north,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=north,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=north,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=north,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=east,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=east,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=east,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=east,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=east,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=east,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=east,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=east,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=east,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=south,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=south,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=south,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=south,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=south,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=south,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=south,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=south,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=south,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=west,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=west,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=west,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=west,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=west,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=west,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_cooked"
+    },
+    "half=upper,facing=west,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top"
+    },
+    "half=upper,facing=west,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=upper,facing=west,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_top_empty"
+    },
+    "half=lower,facing=north,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 0
+    },
+    "half=lower,facing=north,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 0
+    },
+    "half=lower,facing=east,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 90
+    },
+    "half=lower,facing=east,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 90
+    },
+    "half=lower,facing=south,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 180
+    },
+    "half=lower,facing=south,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 180
+    },
+    "half=lower,facing=west,front_output=true,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=true,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_front",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=true,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=true,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=true,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=true,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_back",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=false,has_doner=true,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=false,has_doner=true,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=false,has_doner=false,cooked=true": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 270
+    },
+    "half=lower,facing=west,front_output=false,back_output=false,has_doner=false,cooked=false": {
+      "model": "create_spinning_doners:block/doner_spinner_bottom_closed",
+      "y": 270
+    }
+  }
+}
