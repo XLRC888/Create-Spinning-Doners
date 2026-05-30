@@ -279,7 +279,7 @@ public class SpinningDonersPonderScenes {
 		
 		scene.world().showSection(util.select().position(inF), Direction.SOUTH);
 		scene.world().showSection(util.select().position(outF), Direction.NORTH);
-		scene.idle(30);
+		scene.idle(50);
 
 		scene.overlay().showText(90)
 				.text("create_spinning_doners.ponder.doner_spinner_cooking.text_7")
