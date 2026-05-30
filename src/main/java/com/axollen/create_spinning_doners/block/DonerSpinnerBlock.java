@@ -108,7 +108,7 @@ public class DonerSpinnerBlock extends KineticBlock implements IBE<DonerSpinnerB
         if (!level.getBlockState(pos.above()).canBeReplaced(context)) return null;
         return defaultBlockState()
                 .setValue(HALF, DoubleBlockHalf.LOWER)
-                .setValue(FACING, context.getHorizontalDirection().getOpposite());
+                .setValue(FACING, context.getHorizontalDirection());
     }
 
     @Override

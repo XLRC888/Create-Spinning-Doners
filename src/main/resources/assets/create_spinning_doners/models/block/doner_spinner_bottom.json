@@ -2,12 +2,14 @@
   "parent": "block/block",
   "textures": {
     "particle": "create:block/brass_casing",
-    "casing": "create:block/brass_casing"
+    "casing": "create:block/brass_casing",
+    "input": "create_spinning_doners:block/input_face",
+    "output": "create_spinning_doners:block/output_face"
   },
   "elements": [
     { "from": [0, 0, 0], "to": [16, 16, 2],
       "faces": {
-        "north": { "uv": [0, 0, 16, 16], "texture": "#casing" },
+        "north": { "uv": [0, 0, 16, 16], "texture": "#input" },
         "south": { "uv": [0, 0, 16, 16], "texture": "#casing" },
         "west":  { "uv": [0, 0, 2, 16], "texture": "#casing" },
         "east":  { "uv": [0, 0, 2, 16], "texture": "#casing" },
@@ -18,7 +20,7 @@
     { "from": [0, 0, 14], "to": [16, 16, 16],
       "faces": {
         "north": { "uv": [0, 0, 16, 16], "texture": "#casing" },
-        "south": { "uv": [0, 0, 16, 16], "texture": "#casing" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#output" },
         "west":  { "uv": [14, 0, 16, 16], "texture": "#casing" },
         "east":  { "uv": [14, 0, 16, 16], "texture": "#casing" },
         "up":    { "uv": [0, 14, 16, 16], "texture": "#casing" },

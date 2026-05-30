@@ -70,6 +70,17 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
         public boolean isItemValid(int slot, ItemStack stack) {
             return stack.is(ModItems.RAW_FULL_DONER.get());
         }
+
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (stack.is(ModItems.RAW_FULL_DONER.get()) && donerState == DonerState.EMPTY) {
+                if (!simulate) {
+                    placeDoner();
+                }
+                return ItemStack.EMPTY;
+            }
+            return super.insertItem(slot, stack, simulate);
+        }
     };
 
     private LazyOptional<ItemStackHandler> outputCap = LazyOptional.of(() -> outputInv);
@@ -141,6 +152,7 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
         cutCooldown = 0;
         setChanged();
         sendData();
+        if (level != null) DonerSpinnerBlock.syncTopDonerState(level, worldPosition);
     }
 
     public int getCookingSpeed() {
