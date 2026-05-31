@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "create_spinning_doners:lavash"
+    },
+    {
+      "item": "create_spinning_doners:cooked_doner_piece"
+    }
+  ],
+  "result": {
+    "item": "create_spinning_doners:lavash_doner",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "create_spinning_doners:cooked_doner_piece"
+    }
+  ],
+  "result": {
+    "item": "create_spinning_doners:bread_doner",
+    "count": 1
+  }
+}

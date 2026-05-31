@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:swords",
+    "#forge:tools/knives",
+    "#farmersdelight:tools/knives",
+    "minecraft:shears"
+  ]
+}
