@@ -1,5 +1,6 @@
 package com.axollen.create_spinning_doners.ponder;
 
+import com.axollen.create_spinning_doners.block.CookingStationBlock;
 import com.axollen.create_spinning_doners.block.DonerSpinnerBlock;
 import com.axollen.create_spinning_doners.block.SidewaysHeaterBlock;
 import com.axollen.create_spinning_doners.registry.ModBlocks;
@@ -37,6 +38,8 @@ public class SpinningDonersPonderScenes {
 		helper.addStoryBoard(ModBlocks.DONER_SPINNER.getId(), "doner_spinner_cooking", DONER_SPINNER_FACTORY,
 				ResourceLocation.fromNamespaceAndPath("create", "kinetic_relays"));
 		helper.addStoryBoard(ModBlocks.SIDEWAYS_HEATER.getId(), "sideways_heater", SIDEWAYS_HEATER,
+				ResourceLocation.fromNamespaceAndPath("create", "kinetic_relays"));
+		helper.addStoryBoard(ModBlocks.COOKING_STATION.getId(), "doner_spinner_cooking", COOKING_STATION,
 				ResourceLocation.fromNamespaceAndPath("create", "kinetic_relays"));
 	}
 
@@ -256,7 +259,7 @@ public class SpinningDonersPonderScenes {
 		scene.world().modifyBlock(spinnerLower, s -> s.setValue(DonerSpinnerBlock.FRONT_OUTPUT, false), false);
 		scene.idle(80);
 
-		// Funnel demonstration
+		
 		BlockPos inF = util.grid().at(2, 1, 1);
 		BlockPos outF = util.grid().at(2, 1, 3);
 		
@@ -286,7 +289,7 @@ public class SpinningDonersPonderScenes {
 				.pointAt(util.vector().blockSurface(spinnerLower, Direction.NORTH))
 				.placeNearTarget();
 		
-		// Animate items
+		
 		for (int i = 0; i < 3; i++) {
 			scene.world().createItemEntity(util.vector().centerOf(outF).add(0, 0, 0.4), util.vector().of(0, 0, 0.1), ModItems.COOKED_DONER_PIECE.get().getDefaultInstance());
 			scene.idle(40);
@@ -302,7 +305,7 @@ public class SpinningDonersPonderScenes {
 		scene.showBasePlate();
 		checkerboardFloor(scene, util);
 
-		// Power
+		
 		BlockPos motorPos = util.grid().at(2, 0, 2);
 		scene.world().setBlock(motorPos, AllBlocks.CREATIVE_MOTOR.getDefaultState().setValue(BlockStateProperties.FACING, Direction.UP), false);
 		scene.world().modifyBlockEntityNBT(util.select().position(motorPos), BlockEntity.class, nbt -> nbt.putFloat("Speed", 128.0f));
@@ -317,7 +320,7 @@ public class SpinningDonersPonderScenes {
 			scene.world().setBlock(util.grid().at(x, 0, 3), AllBlocks.ANDESITE_CASING.getDefaultState(), false);
 		}
 
-		// Machines at y=1
+		
 		BlockPos s1L = util.grid().at(1, 1, 2);
 		BlockPos s1U = util.grid().at(1, 2, 2);
 		BlockPos s2L = util.grid().at(3, 1, 2);
@@ -328,17 +331,17 @@ public class SpinningDonersPonderScenes {
 		scene.world().setBlock(s2L, ModBlocks.DONER_SPINNER.get().defaultBlockState().setValue(DonerSpinnerBlock.HALF, DoubleBlockHalf.LOWER).setValue(DonerSpinnerBlock.FACING, Direction.NORTH), false);
 		scene.world().setBlock(s2U, ModBlocks.DONER_SPINNER.get().defaultBlockState().setValue(DonerSpinnerBlock.HALF, DoubleBlockHalf.UPPER).setValue(DonerSpinnerBlock.FACING, Direction.NORTH).setValue(DonerSpinnerBlock.HAS_DONER, true).setValue(DonerSpinnerBlock.COOKED, true), false);
 
-		// Heaters
+		
 		scene.world().setBlock(util.grid().at(0, 2, 2), ModBlocks.SIDEWAYS_HEATER.get().defaultBlockState().setValue(SidewaysHeaterBlock.FACING, Direction.EAST), false);
 		scene.world().setBlock(util.grid().at(2, 2, 2), ModBlocks.SIDEWAYS_HEATER.get().defaultBlockState().setValue(SidewaysHeaterBlock.FACING, Direction.EAST), false);
 		scene.world().setBlock(util.grid().at(4, 2, 2), ModBlocks.SIDEWAYS_HEATER.get().defaultBlockState().setValue(SidewaysHeaterBlock.FACING, Direction.WEST), false);
 
-		// Redstone signal for auto-chopping (y=1)
+		
 		scene.world().setBlock(util.grid().at(0, 1, 2), Blocks.REDSTONE_BLOCK.defaultBlockState(), false);
 		scene.world().setBlock(util.grid().at(2, 1, 2), Blocks.REDSTONE_BLOCK.defaultBlockState(), false);
 		scene.world().setBlock(util.grid().at(4, 1, 2), Blocks.REDSTONE_BLOCK.defaultBlockState(), false);
 
-		// Funnels at y=1
+		
 		BlockPos inF1 = util.grid().at(1, 1, 1);
 		BlockPos inF2 = util.grid().at(3, 1, 1);
 		scene.world().setBlock(inF1, setDirection(AllBlocks.BRASS_FUNNEL.getDefaultState(), Direction.NORTH), false);
@@ -363,7 +366,7 @@ public class SpinningDonersPonderScenes {
 		scene.world().modifyBlockEntityNBT(util.select().position(s1L), BlockEntity.class, nbt -> { nbt.putInt("DonerState", 3); nbt.putInt("Pieces", 50); });
 		scene.world().modifyBlockEntityNBT(util.select().position(s2L), BlockEntity.class, nbt -> { nbt.putInt("DonerState", 3); nbt.putInt("Pieces", 50); });
 
-		// Animation loop
+		
 		for (int i = 0; i < 20; i++) {
 			if (i % 8 == 0) {
 				scene.world().createItemEntity(util.vector().centerOf(inF1).add(0, 0, -0.4), util.vector().of(0, 0, 0.1), ModItems.RAW_FULL_DONER.get().getDefaultInstance());
@@ -471,6 +474,123 @@ public class SpinningDonersPonderScenes {
 		scene.world().modifyBlockEntityNBT(util.select().position(backShaft), BlockEntity.class, nbt -> nbt.putFloat("Speed", 64.0f));
 		scene.world().showSection(util.select().position(backShaft), Direction.EAST);
 		scene.idle(80);
+
+		scene.markAsFinished();
+	};
+
+	public static final PonderStoryBoard COOKING_STATION = (scene, util) -> {
+		scene.title("cooking_station", "The Döner Station");
+		scene.configureBasePlate(0, 0, 5);
+		scene.showBasePlate();
+		checkerboardFloor(scene, util);
+
+		BlockPos motorPos = util.grid().at(2, 0, 2);
+		BlockPos shaftWest = util.grid().at(1, 1, 2);
+		BlockPos stationPos = util.grid().at(2, 1, 2);
+		BlockPos shaftEast = util.grid().at(3, 1, 2);
+		BlockPos inF = util.grid().at(2, 1, 1);
+		BlockPos outF = util.grid().at(2, 1, 3);
+
+		scene.world().setBlock(motorPos, AllBlocks.CREATIVE_MOTOR.getDefaultState()
+				.setValue(BlockStateProperties.FACING, Direction.UP), false);
+		scene.world().modifyBlockEntityNBT(util.select().position(motorPos), BlockEntity.class,
+				nbt -> nbt.putFloat("Speed", 128.0f));
+
+		scene.world().showSection(util.select().layer(0), Direction.UP);
+		scene.idle(10);
+
+		scene.world().setBlock(shaftWest, AllBlocks.SHAFT.getDefaultState()
+				.setValue(BlockStateProperties.AXIS, Direction.Axis.X), false);
+		scene.world().setBlock(stationPos, ModBlocks.COOKING_STATION.get().defaultBlockState()
+				.setValue(CookingStationBlock.FACING, Direction.NORTH)
+				.setValue(CookingStationBlock.LEFT_SHAFT, true)
+				.setValue(CookingStationBlock.RIGHT_SHAFT, true), false);
+		scene.world().setBlock(shaftEast, AllBlocks.SHAFT.getDefaultState()
+				.setValue(BlockStateProperties.AXIS, Direction.Axis.X), false);
+		scene.world().showSection(util.select().fromTo(shaftWest, shaftEast), Direction.DOWN);
+		scene.idle(20);
+		scene.world().modifyBlockEntityNBT(util.select().fromTo(motorPos, shaftEast).add(util.select().position(shaftWest)), BlockEntity.class,
+				nbt -> nbt.putFloat("Speed", 128.0f));
+
+		scene.overlay().showText(80)
+				.text("create_spinning_doners.ponder.cooking_station.text_1")
+				.pointAt(util.vector().centerOf(stationPos))
+				.placeNearTarget();
+		scene.idle(90);
+
+		scene.world().setBlock(inF.below(), AllBlocks.BRASS_CASING.getDefaultState(), false);
+		scene.world().setBlock(outF.below(), AllBlocks.BRASS_CASING.getDefaultState(), false);
+		scene.world().setBlock(inF, setDirection(AllBlocks.BRASS_FUNNEL.getDefaultState(), Direction.NORTH), false);
+		scene.world().modifyBlock(inF, s -> setExtracting(s, false), false);
+		scene.world().setBlock(outF, setDirection(AllBlocks.BRASS_FUNNEL.getDefaultState(), Direction.SOUTH), false);
+		scene.world().modifyBlock(outF, s -> setExtracting(s, true), false);
+		scene.world().showSection(util.select().fromTo(inF.below(), outF), Direction.UP);
+		scene.idle(20);
+
+		scene.overlay().showText(90)
+				.attachKeyFrame()
+				.text("create_spinning_doners.ponder.cooking_station.text_2")
+				.pointAt(util.vector().centerOf(inF))
+				.placeNearTarget();
+		scene.idle(20);
+		scene.world().createItemEntity(util.vector().centerOf(inF).add(0, 0, -0.4),
+				util.vector().of(0, 0, 0.1), ModItems.RAW_FULL_DONER.get().getDefaultInstance());
+		scene.idle(30);
+		scene.world().modifyBlockEntityNBT(util.select().position(stationPos), BlockEntity.class, nbt -> {
+			nbt.putInt("DonerState", 2);
+			nbt.putInt("Cooking", 400);
+		});
+		scene.world().modifyBlock(stationPos, s -> s
+				.setValue(CookingStationBlock.HAS_DONER, true)
+				.setValue(CookingStationBlock.COOKED, false), false);
+		scene.idle(60);
+
+		scene.overlay().showText(90)
+				.attachKeyFrame()
+				.text("create_spinning_doners.ponder.cooking_station.text_3")
+				.pointAt(util.vector().centerOf(stationPos))
+				.placeNearTarget();
+		scene.idle(30);
+		scene.overlay().showControls(util.vector().topOf(stationPos), Pointing.DOWN, 40)
+				.withItem(AllItems.GOGGLES.asStack());
+		scene.idle(90);
+
+		scene.world().modifyBlockEntityNBT(util.select().position(stationPos), BlockEntity.class, nbt -> {
+			nbt.putInt("DonerState", 3);
+			nbt.putInt("Cooking", 1200);
+		});
+		scene.world().modifyBlock(stationPos, s -> s.setValue(CookingStationBlock.COOKED, true), false);
+		scene.idle(20);
+
+		scene.overlay().showText(80)
+				.attachKeyFrame()
+				.text("create_spinning_doners.ponder.cooking_station.text_4")
+				.pointAt(util.vector().centerOf(outF))
+				.placeNearTarget();
+		scene.idle(20);
+		scene.world().createItemEntity(util.vector().centerOf(outF).add(0, 0, 0.4),
+				util.vector().of(0, 0, 0.1), ModItems.COOKED_FULL_DONER.get().getDefaultInstance());
+		scene.idle(70);
+
+		scene.overlay().showText(80)
+				.attachKeyFrame()
+				.text("create_spinning_doners.ponder.cooking_station.text_5")
+				.pointAt(util.vector().blockSurface(stationPos, Direction.WEST))
+				.placeNearTarget();
+		scene.idle(20);
+		scene.overlay().showControls(util.vector().blockSurface(stationPos, Direction.WEST), Pointing.RIGHT, 40)
+				.rightClick()
+				.withItem(AllItems.WRENCH.asStack());
+		scene.idle(20);
+		scene.world().modifyBlock(stationPos, s -> s.setValue(CookingStationBlock.LEFT_SHAFT, false), false);
+		scene.world().modifyBlockEntityNBT(util.select().position(shaftWest), BlockEntity.class, nbt -> nbt.putFloat("Speed", 0f));
+		scene.idle(60);
+
+		scene.overlay().showText(90)
+				.text("create_spinning_doners.ponder.cooking_station.text_6")
+				.pointAt(util.vector().blockSurface(stationPos, Direction.NORTH))
+				.placeNearTarget();
+		scene.idle(60);
 
 		scene.markAsFinished();
 	};

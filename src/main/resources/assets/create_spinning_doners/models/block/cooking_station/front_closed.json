@@ -1,0 +1,19 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "create:block/brass_casing",
+    "casing": "create:block/brass_casing"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 16, 2],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#casing", "cullface": "north" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#casing" },
+        "west":  { "uv": [0, 0, 2, 16], "texture": "#casing", "cullface": "west" },
+        "east":  { "uv": [0, 0, 2, 16], "texture": "#casing", "cullface": "east" },
+        "up":    { "uv": [0, 0, 16, 2], "texture": "#casing", "cullface": "up" },
+        "down":  { "uv": [0, 0, 16, 2], "texture": "#casing", "cullface": "down" }
+      }
+    }
+  ]
+}

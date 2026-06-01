@@ -1,6 +1,7 @@
 package com.axollen.create_spinning_doners.registry;
 
 import com.axollen.create_spinning_doners.SpinningDoners;
+import com.axollen.create_spinning_doners.block.CookingStationBlockEntity;
 import com.axollen.create_spinning_doners.block.DonerSpinnerBlockEntity;
 import com.axollen.create_spinning_doners.block.SidewaysHeaterBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -24,6 +25,14 @@ public class ModBlockEntities {
                 BlockEntityType<SidewaysHeaterBlockEntity> type = BlockEntityType.Builder.of(
                         SidewaysHeaterBlockEntity::new, ModBlocks.SIDEWAYS_HEATER.get()).build(null);
                 SidewaysHeaterBlockEntity.TYPE = type;
+                return type;
+            });
+
+    public static final RegistryObject<BlockEntityType<CookingStationBlockEntity>> COOKING_STATION = BLOCK_ENTITIES.register("cooking_station",
+            () -> {
+                BlockEntityType<CookingStationBlockEntity> type = BlockEntityType.Builder.of(
+                        CookingStationBlockEntity::new, ModBlocks.COOKING_STATION.get()).build(null);
+                CookingStationBlockEntity.TYPE = type;
                 return type;
             });
 }

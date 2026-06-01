@@ -1,0 +1,17 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "brass": "create:block/brass_block"
+  },
+  "elements": [
+    {
+      "from": [15, 1, 1], "to": [16, 14, 15],
+      "faces": {
+        "east":  { "uv": [1, 1, 15, 14], "texture": "#brass", "cullface": "east" },
+        "west":  { "uv": [1, 1, 15, 14], "texture": "#brass" },
+        "up":    { "uv": [15, 1, 16, 15], "texture": "#brass" },
+        "down":  { "uv": [15, 1, 16, 15], "texture": "#brass" }
+      }
+    }
+  ]
+}

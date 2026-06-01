@@ -1,0 +1,11 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "create:block/brass_block",
+    "brass": "create:block/brass_block"
+  },
+  "elements": [
+    { "from": [0, 14, 0], "to": [16, 15, 16], "faces": { "up": { "uv": [0, 0, 16, 16], "texture": "#brass" }, "down": { "uv": [0, 0, 16, 16], "texture": "#brass" } } },
+    { "from": [0, 0, 0], "to": [16, 1, 16], "faces": { "down": { "uv": [0, 0, 16, 16], "texture": "#brass", "cullface": "down" }, "up": { "uv": [0, 0, 16, 16], "texture": "#brass" } } }
+  ]
+}

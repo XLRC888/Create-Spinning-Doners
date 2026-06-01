@@ -2,47 +2,49 @@
 .gradle/
 build/
 gradle-app.setting
+.gradletasknamecache
 
-# Minecraft run directories
+# Minecraft / Forge run directories
 run/
+run-data/
 /run/
 /run-data/
 
-# IntelliJ IDEA
-.idea/
+# Compiled output
+bin/
 out/
+*.class
+*.jar
+!gradle/wrapper/*.jar
+
+# Accidental dumps at project root (keep src/main/** tracked)
+/com/
+/assets/
+
+# IDE
+.idea/
 *.iml
 *.iws
 *.ipr
-# Eclipse
+.vscode/
+.antigravitycli/
+.eclipse/
 eclipse/
-*.pydevproject
-.project
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
 .classpath
+.project
 .settings/
-.loadpath
 .factorypath
 .externalToolBuilders/
 *.launch
 .cproject
 .buildpath
+.loadpath
+local.properties
 
-# VS Code & Agent Tools
-.vscode/
-.antigravitycli/
-
-# Log files
+# Logs & local libs
 *.log
+/libs/
 
-# OS-specific and extra files
+# OS
 .DS_Store
 Thumbs.db
-/libs/

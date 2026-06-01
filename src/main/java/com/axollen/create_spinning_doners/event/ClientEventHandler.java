@@ -1,5 +1,6 @@
 package com.axollen.create_spinning_doners.event;
 
+import com.axollen.create_spinning_doners.block.CookingStationRenderer;
 import com.axollen.create_spinning_doners.block.DonerSpinnerRenderer;
 import com.axollen.create_spinning_doners.block.SidewaysHeaterRenderer;
 import com.axollen.create_spinning_doners.ponder.SpinningDonersPonderPlugin;
@@ -22,5 +23,6 @@ public class ClientEventHandler {
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.DONER_SPINNER.get(), DonerSpinnerRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.SIDEWAYS_HEATER.get(), SidewaysHeaterRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.COOKING_STATION.get(), CookingStationRenderer::new);
     }
 }

@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "face": "create_spinning_doners:block/input_face",
+    "brass": "create:block/brass_block"
+  },
+  "elements": [
+    {
+      "from": [0, 1, 0], "to": [16, 14, 1],
+      "faces": {
+        "north": { "uv": [0, 1, 16, 14], "texture": "#face", "cullface": "north" },
+        "south": { "uv": [0, 1, 16, 14], "texture": "#brass" },
+        "up":    { "uv": [0, 0, 16, 1], "texture": "#brass" },
+        "down":  { "uv": [0, 15, 16, 16], "texture": "#brass" },
+        "west":  { "uv": [0, 1, 1, 14], "texture": "#brass" },
+        "east":  { "uv": [15, 1, 16, 14], "texture": "#brass" }
+      }
+    }
+  ]
+}

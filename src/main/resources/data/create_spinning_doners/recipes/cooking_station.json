@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "K",
+    "H",
     "S",
     "B"
   ],
   "key": {
-    "K": {
-      "tag": "forge:tools/knives"
+    "H": {
+      "item": "create_spinning_doners:sideways_heater"
     },
     "S": {
       "item": "create:shaft"
     },
     "B": {
-      "item": "create:brass_casing"
+      "tag": "forge:storage_blocks/brass"
     }
   },
   "result": {
-    "item": "create_spinning_doners:doner_spinner"
+    "item": "create_spinning_doners:cooking_station"
   }
 }

@@ -17,6 +17,7 @@ public class ModCreativeTab {
                     .displayItems((params, output) -> {
                         output.accept(ModItems.DONER_SPINNER.get());
                         output.accept(ModItems.SIDEWAYS_HEATER.get());
+                        output.accept(ModItems.COOKING_STATION.get());
                         output.accept(ModItems.RAW_FULL_DONER.get());
                         output.accept(ModItems.COOKED_FULL_DONER.get());
                         output.accept(ModItems.RAW_DONER_PIECE.get());

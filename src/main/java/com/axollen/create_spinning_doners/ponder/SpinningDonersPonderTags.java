@@ -11,5 +11,7 @@ public class SpinningDonersPonderTags {
                 ResourceLocation.fromNamespaceAndPath("create", "kinetic_relays"));
         helper.addTagToComponent(ModBlocks.SIDEWAYS_HEATER.getId(),
                 ResourceLocation.fromNamespaceAndPath("create", "kinetic_relays"));
+        helper.addTagToComponent(ModBlocks.COOKING_STATION.getId(),
+                ResourceLocation.fromNamespaceAndPath("create", "kinetic_relays"));
     }
 }

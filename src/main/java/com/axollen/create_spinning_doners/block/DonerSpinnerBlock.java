@@ -106,9 +106,13 @@ public class DonerSpinnerBlock extends KineticBlock implements IBE<DonerSpinnerB
         Level level = context.getLevel();
         if (pos.getY() >= level.getMaxBuildHeight() - 1) return null;
         if (!level.getBlockState(pos.above()).canBeReplaced(context)) return null;
+        Direction facing = context.getHorizontalDirection().getOpposite();
+        if (context.getPlayer() != null && context.getPlayer().isShiftKeyDown()) {
+            facing = facing.getOpposite();
+        }
         return defaultBlockState()
                 .setValue(HALF, DoubleBlockHalf.LOWER)
-                .setValue(FACING, context.getHorizontalDirection());
+                .setValue(FACING, facing);
     }
 
     @Override
@@ -145,9 +149,14 @@ public class DonerSpinnerBlock extends KineticBlock implements IBE<DonerSpinnerB
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
-
         DoubleBlockHalf half = state.getValue(HALF);
+
+        if (level.isClientSide) {
+            ItemStack held = player.getItemInHand(hand);
+            if (held.isEmpty() || held.is(ModItems.RAW_FULL_DONER.get()) || isKnife(held))
+                return InteractionResult.SUCCESS;
+            return InteractionResult.PASS;
+        }
 
         if (half == DoubleBlockHalf.UPPER) {
             BlockPos below = pos.below();
@@ -174,6 +183,17 @@ public class DonerSpinnerBlock extends KineticBlock implements IBE<DonerSpinnerB
             if (hand == InteractionHand.MAIN_HAND && player.getItemInHand(hand).isEmpty()) {
                 DonerSpinnerBlockEntity bottomBe = getBlockEntity(level, pos.below());
                 if (bottomBe != null) {
+                    DonerSpinnerBlockEntity.DonerState donerState = bottomBe.getDonerState();
+                    if (donerState != DonerSpinnerBlockEntity.DonerState.EMPTY) {
+                        ItemStack doner = bottomBe.getRetrieveDonerItem();
+                        if (!player.getInventory().add(doner)) {
+                            Vec3 dropPos = Vec3.atCenterOf(pos);
+                            level.addFreshEntity(new ItemEntity(level, dropPos.x, dropPos.y + 0.5, dropPos.z, doner));
+                        }
+                        bottomBe.clearDoner();
+                        syncTopDonerState(level, pos, false);
+                        return InteractionResult.SUCCESS;
+                    }
                     for (int i = 0; i < bottomBe.outputInv.getSlots(); i++) {
                         ItemStack extracted = bottomBe.outputInv.extractItem(i, 64, false);
                         if (!extracted.isEmpty()) {
@@ -265,7 +285,8 @@ public class DonerSpinnerBlock extends KineticBlock implements IBE<DonerSpinnerB
                stack.is(ItemTags.SWORDS) ||
                stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "tools/knives"))) ||
                stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "knives"))) ||
-               stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "tools/knives")));
+               stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "tools/knives"))) ||
+               stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("create_spinning_doners", "doner_spinner_tools")));
     }
 
     @Override

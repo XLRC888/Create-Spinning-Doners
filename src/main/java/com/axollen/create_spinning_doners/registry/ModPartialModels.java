@@ -21,6 +21,5 @@ public class ModPartialModels {
             new ResourceLocation(SpinningDoners.MOD_ID, "block/doner_spinner/spinning_cooked_thin"));
     public static final PartialModel HEATER_SHAFT = PartialModel.of(
             new ResourceLocation(SpinningDoners.MOD_ID, "block/heater/heater_shaft"));
-
     public static void init() {}
 }

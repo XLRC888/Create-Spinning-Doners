@@ -1,0 +1,26 @@
+{
+  "multipart": [
+    { "when": { "facing": "north" }, "apply": { "model": "create_spinning_doners:block/cooking_station_core", "y": 0 } },
+    { "when": { "facing": "east" }, "apply": { "model": "create_spinning_doners:block/cooking_station_core", "y": 90 } },
+    { "when": { "facing": "south" }, "apply": { "model": "create_spinning_doners:block/cooking_station_core", "y": 180 } },
+    { "when": { "facing": "west" }, "apply": { "model": "create_spinning_doners:block/cooking_station_core", "y": 270 } },
+
+    { "when": { "facing": "north", "left_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_open", "y": 0 } },
+    { "when": { "facing": "east", "left_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_open", "y": 90 } },
+    { "when": { "facing": "south", "left_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_open", "y": 180 } },
+    { "when": { "facing": "west", "left_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_open", "y": 270 } },
+    { "when": { "facing": "north", "left_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_closed", "y": 0 } },
+    { "when": { "facing": "east", "left_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_closed", "y": 90 } },
+    { "when": { "facing": "south", "left_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_closed", "y": 180 } },
+    { "when": { "facing": "west", "left_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_left_closed", "y": 270 } },
+
+    { "when": { "facing": "north", "right_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_open", "y": 0 } },
+    { "when": { "facing": "east", "right_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_open", "y": 90 } },
+    { "when": { "facing": "south", "right_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_open", "y": 180 } },
+    { "when": { "facing": "west", "right_shaft": true }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_open", "y": 270 } },
+    { "when": { "facing": "north", "right_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_closed", "y": 0 } },
+    { "when": { "facing": "east", "right_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_closed", "y": 90 } },
+    { "when": { "facing": "south", "right_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_closed", "y": 180 } },
+    { "when": { "facing": "west", "right_shaft": false }, "apply": { "model": "create_spinning_doners:block/cooking_station_side_right_closed", "y": 270 } }
+  ]
+}

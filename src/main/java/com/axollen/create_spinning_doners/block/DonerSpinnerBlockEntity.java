@@ -3,7 +3,7 @@ package com.axollen.create_spinning_doners.block;
 import com.axollen.create_spinning_doners.registry.ModItems;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
-import com.simibubi.create.foundation.blockEntity.behaviour.ValueBoxTransform;
+import com.simibubi.create.foundation.blockEntity.behaviour.CenteredSideValueBoxTransform;
 import com.simibubi.create.foundation.blockEntity.behaviour.scrollValue.INamedIconOptions;
 import com.simibubi.create.foundation.blockEntity.behaviour.scrollValue.ScrollOptionBehaviour;
 import com.simibubi.create.foundation.gui.AllIcons;
@@ -77,7 +77,9 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
                 if (!simulate) {
                     placeDoner();
                 }
-                return ItemStack.EMPTY;
+                ItemStack remainder = stack.copy();
+                remainder.shrink(1);
+                return remainder;
             }
             return super.insertItem(slot, stack, simulate);
         }
@@ -95,7 +97,12 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
         super.addBehaviours(behaviours);
         if (isTop()) return;
         chopMode = new ScrollOptionBehaviour<>(ChopMode.class,
-            Component.literal("Chop Mode"), this, new SpinnerValueBox());
+            Component.literal("Chop Mode"), this, new CenteredSideValueBoxTransform(
+                (state, dir) -> {
+                    if (dir.getAxis() == Axis.Y) return false;
+                    Direction facing = state.getValue(DonerSpinnerBlock.FACING);
+                    return dir.getAxis() != facing.getAxis();
+                }));
         chopMode.withCallback(i -> {
             setChanged();
             sendData();
@@ -289,7 +296,8 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
                stack.is(ItemTags.SWORDS) ||
                stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "tools/knives"))) ||
                stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "knives"))) ||
-               stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "tools/knives")));
+               stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "tools/knives"))) ||
+               stack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath("create_spinning_doners", "doner_spinner_tools")));
     }
 
     private ItemStack getPieceForState() {
@@ -336,6 +344,24 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
         if (level == null) return;
         Vec3 pos = Vec3.atCenterOf(worldPosition);
         level.addFreshEntity(new ItemEntity(level, pos.x, pos.y + 0.5, pos.z, stack));
+    }
+
+    public ItemStack getRetrieveDonerItem() {
+        return new ItemStack(ModItems.RAW_FULL_DONER.get());
+    }
+
+    public void clearDoner() {
+        if (isTop()) {
+            DonerSpinnerBlockEntity bottom = findBottomBE();
+            if (bottom != null) bottom.clearDoner();
+            return;
+        }
+        donerState = DonerState.EMPTY;
+        piecesRemaining = 0;
+        cookingProgress = 0;
+        cutCooldown = 0;
+        setChanged();
+        sendData();
     }
 
     public void dropContents() {
@@ -434,17 +460,4 @@ public class DonerSpinnerBlockEntity extends KineticBlockEntity {
         tag.put("InputInv", inputInv.serializeNBT());
     }
 
-    private class SpinnerValueBox extends ValueBoxTransform.Sided {
-        @Override
-        protected Vec3 getSouthLocation() {
-            return new Vec3(0.5, 0.4, 1.0);
-        }
-
-        @Override
-        protected boolean isSideActive(BlockState state, Direction dir) {
-            if (dir.getAxis() == Axis.Y) return false;
-            Direction facing = state.getValue(DonerSpinnerBlock.FACING);
-            return dir.getAxis() != facing.getAxis();
-        }
-    }
 }

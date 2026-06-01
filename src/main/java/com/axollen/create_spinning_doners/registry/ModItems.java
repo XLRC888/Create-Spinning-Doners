@@ -29,4 +29,7 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.DONER_SPINNER.get(), new Item.Properties()));
     public static final RegistryObject<Item> SIDEWAYS_HEATER = ITEMS.register("sideways_heater",
             () -> new BlockItem(ModBlocks.SIDEWAYS_HEATER.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> COOKING_STATION = ITEMS.register("cooking_station",
+            () -> new BlockItem(ModBlocks.COOKING_STATION.get(), new Item.Properties()));
 }
